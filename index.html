@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REBA - Real Estate Bot Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">REBA</h1>
+            <p class="tagline">Real Estate Bot Assistant</p>
+        </header>
+
+        <div class="search-container">
+            <div class="input-group">
+                <input type="text" id="searchInput" placeholder="Try: 'Show me 123 Main St, Miami' or 'Homes for sale in Beverly Hills'">
+                <button id="searchBtn" class="search-btn">Search</button>
+                <button id="voiceBtn" class="voice-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+            </div>
+            <div id="voiceStatus" class="voice-status"></div>
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching properties...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+        <div id="results" class="results-container"></div>
+
+        <footer>
+            <p>Powered by Real Estate APIs • Voice Activated • Instant Property Data</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
