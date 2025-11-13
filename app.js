@@ -137,7 +137,9 @@ async function searchProperties(query) {
             
         let endpoint = '';
         let params = '';
-        
+        const backendUrl = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3001'
+    : 'https://rebadeployment-jlvfwhr51-ashleighs-projects-fccc74bf.vercel.app';
         if (parsedQuery.type === 'neighborhood') {
             endpoint = '/api/properties/list';
             params = `?location=${encodeURIComponent(parsedQuery.location)}&limit=10`;
